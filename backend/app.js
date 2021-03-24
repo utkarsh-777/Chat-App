@@ -72,7 +72,7 @@ mongoose.connection.on('error',()=>{
 
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended:false}));
-app.use(cors());
+app.use(cors({origin:'*',methods:["GET","POST","PUT","DELETE"]}));
 
 app.use('/api',authRoutes);
 app.use('/api',roomRoutes);
