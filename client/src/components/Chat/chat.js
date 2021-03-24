@@ -13,7 +13,7 @@ const queryString = require('query-string');
 let socket;
 
 const Chat = ({location}) => {
-    const ENDPOINT = "localhost:7000"
+    const ENDPOINT = "/"
     const {state} = useContext(Context);
 
     const [message,setMessage] = useState('');
