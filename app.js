@@ -74,6 +74,10 @@ app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended:false}));
 app.use(cors({origin:'*',methods:["GET","POST","PUT","DELETE"]}));
 
+if(process.env.NODE_ENV==="production"){
+    app.use(express.static('client/build'))
+}
+
 app.use('/api',authRoutes);
 app.use('/api',roomRoutes);
 

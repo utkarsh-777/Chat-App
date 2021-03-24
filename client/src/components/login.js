@@ -17,7 +17,7 @@ const Login = () => {
     const {dispatch} = useContext(Context);
 
     const handleSubmit = () => {
-        fetch(`http://localhost:${process.env.PORT}/api/login`,{
+        fetch(`http://localhost:7000/api/login`,{
             method:'POST',
             headers:{
                 "Content-Type":"application/json"
@@ -29,7 +29,7 @@ const Login = () => {
         }).then(res=>res.json())
           .then(data=>{
               localStorage.setItem('token',data.token);
-              axios(`http://localhost:${process.env.PORT}/api/get-user`,{
+              axios(`http://localhost:7000/api/get-user`,{
                 method:"GET",
                 headers:{
                   Authorization:data.token
