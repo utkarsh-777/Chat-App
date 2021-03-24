@@ -22,7 +22,7 @@ const Chat = ({location}) => {
     const parsed = queryString.parse(location.search);
 
     useEffect(()=>{
-        fetch('http://localhost:7000/api/room-messages',{
+        fetch('/api/room-messages',{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",

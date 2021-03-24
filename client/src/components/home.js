@@ -27,7 +27,7 @@ const Home = () => {
     const head = `welcome, ${state && state.name}`
 
     useEffect(()=>{
-        fetch('http://localhost:7000/api/get-all-rooms',{
+        fetch('/api/get-all-rooms',{
             method:"GET",
             headers:{
                 Authorization:localStorage.getItem('token')
@@ -44,7 +44,7 @@ const Home = () => {
 
     const handleCreateRoom = () => {
         if(room){
-            fetch('http://localhost:7000/api/create-room',{
+            fetch('/api/create-room',{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json",

@@ -12,7 +12,7 @@ const Signup = () => {
     const history = useHistory();
 
     const handleSubmit = () => {
-        fetch("http://localhost:7000/api/signup",{
+        fetch("/api/signup",{
             method:'POST',
             headers:{
                 "Content-Type":"application/json"

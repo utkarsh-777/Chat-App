@@ -16,7 +16,7 @@ const Routing = () => {
   useEffect(()=>{
     const token = localStorage.getItem('token');
     if(token){
-      axios('http://localhost:7000/api/get-user',{
+      axios('/api/get-user',{
         method:"GET",
         headers:{
           Authorization:token
